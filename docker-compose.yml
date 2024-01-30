@@ -9,3 +9,5 @@ services:
       - 8888:8888
     container_name: jupyter_notebook
     command: "start-notebook.sh --NotebookApp.token="
+    env_file:
+      - .env
