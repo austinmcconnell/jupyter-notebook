@@ -5,6 +5,7 @@ verify_ssl = true
 
 [packages]
 jupysql = "*"
+jupyterlab_rise = "*"
 numpy = "*"
 pandas = "*"
 psycopg2-binary = "*"
