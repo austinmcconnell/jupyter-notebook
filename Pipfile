@@ -1,18 +1,17 @@
 [[source]]
+name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-name = "pypi"
 
 [packages]
 jupysql = "*"
-sqlalchemy = "*"
-psycopg2-binary = "*"
-pandas = "*"
 numpy = "*"
+pandas = "*"
+psycopg2-binary = "*"
 seaborn = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.10"
-# python_full_version = "3.10.6"
