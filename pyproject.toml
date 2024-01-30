@@ -1,0 +1,4 @@
+[tool.tomlsort]
+in_place = true
+sort_first = ["source", "packages", "dev-packages", "requires"]
+sort_table_keys = true
