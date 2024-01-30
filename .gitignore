@@ -160,3 +160,7 @@ cython_debug/
 #.idea/
 
 # End of https://github.com/github/gitignore/blob/main/Python.gitignore
+
+# Notebooks
+# Ignore all notebooks by default. Explicitly add generic/template/example notebooks'
+notebooks/
