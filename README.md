@@ -20,7 +20,7 @@ dc exec jupyter /bin/bash
 
 ## Slides
 
-To set the Slide Type for each cell, first click on the Common Tools gear icon in the top-right
+If you want to generate presentations from a jupyter notebook, first you need to set the slide type for each cell. To do that, click on the Common Tools gear icon in the top-right
 
 ![Common Tools](img/common-tools-icon.png)
 
@@ -28,35 +28,15 @@ Then, set the cell type using to the Slide Type dropdown box
 
 ![Slide Type](img/slide-type-box.png)
 
-To preview the slides directly from jupyter lab, click the Slides button
+Once you have set all the cell slide types, you can preview the slides in jupyter lab by clicking the Slides button
 
 ![Slides Button](img/rise-icon.png)
 
-Finally, to export the notebook into a slides presentation, either export directly from jupyter lab
+Or if you want to export the notebook into an HTML presentation, either export directly from jupyter lab
 
 ![Export Slides](img/export-as-html-slides.png)
 
 or use the CLI commands below.
-
-### CLI Commands
-
-Run the following command to generate slides including code blocks:
-
-```shell
-jupyter nbconvert --to slides presentation.ipynb
-```
-
-If you want to serve the presentation immediately after conversion, run
-
-```shell
-jupyter nbconvert --to slides presentation.ipynb --post serve
-```
-
-IF you want to exclude code blocks from the slides (only see the output of cells), run
-
-```shell
-jupyter nbconvert --to slides --no-input presentation.ipynb
-```
 
 ### Presentation Mode
 
@@ -65,3 +45,67 @@ During a presentation, know the following keyboard shortcuts:
 - `Esc` or 'O": Slide overview
 - `S`: Speaker notes view
 - `?`: See all keyboard shortcuts
+
+### Export as HTML Slides
+
+Run the following command to generate slides including code blocks:
+
+```shell
+jupyter nbconvert --to slides notebooks/presentation.ipynb
+```
+
+If you want to serve the presentation immediately after conversion, run
+
+```shell
+jupyter nbconvert --to slides --post serve notebooks/presentation.ipynb
+```
+
+If you want to exclude code blocks from the slides (only see the output of cells), run
+
+```shell
+jupyter nbconvert --to slides --no-input notebooks/presentation.ipynb
+```
+
+### Export as PDF
+
+To enable exporting as as PDF, install host-level PDF-related dependencies with
+
+```shell
+brew install pandoc basictex
+eval "$(/usr/libexec/path_helper)"
+export PATH="$PATH:/Library/TeX/texbin/"
+sudo tlmgr update --self
+sudo tlmgr install texliveonfly
+sudo tlmgr install adjustbox
+sudo tlmgr install tcolorbox
+sudo tlmgr install collectbox
+sudo tlmgr install ucs
+sudo tlmgr install environ
+sudo tlmgr install trimspaces
+sudo tlmgr install titling
+sudo tlmgr install enumitem
+sudo tlmgr install rsfs
+sudo tlmgr install pdfcol
+```
+
+To output as a PDF document, run
+
+```shell
+jupyter nbconvert --to pdf notebooks/presentation.ipynb
+```
+
+#### PDF Troubleshooting
+
+If you are having issues converting to a PDF, try converting to latex first
+
+```shell
+jupyter nbconvert --to latex notebooks/presentation.ipynb
+```
+
+and then manually convert to PDF with
+
+```shell
+xelatex filename.tex
+```
+
+Hopefully you'll see errors related to missing packages which you can then install with `sudo tlmgr install $MISSING_PACKAGE`
