@@ -4,10 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [packages]
+ipython = "*"
 jupysql = "*"
 jupyterlab_rise = "*"
+nbconvert = "*"
 numpy = "*"
 pandas = "*"
+pandoc = "*"
 psycopg2-binary = "*"
 seaborn = "*"
 sqlalchemy = "*"
