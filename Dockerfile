@@ -1,4 +1,4 @@
-FROM jupyter/minimal-notebook
+FROM quay.io/jupyter/minimal-notebook:notebook-7.0.7
 
 RUN pip install --upgrade pip setuptools wheel && \
     pip install pipenv
