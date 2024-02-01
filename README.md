@@ -1,6 +1,7 @@
 # Jupyter Notebooks
 
-This repo contains all needed to get jupyter lab running locally with some common data science and plotting packages pre-installed.
+This repo contains all needed to get jupyter lab running locally with some common common data
+science and plotting packages pre-installed.
 
 ## Development Setup
 
@@ -20,7 +21,8 @@ dc exec jupyter /bin/bash
 
 ## Slides
 
-If you want to generate presentations from a jupyter notebook, first you need to set the slide type for each cell. To do that, click on the Common Tools gear icon in the top-right
+If you want to generate presentations from a jupyter notebook, first you need to set the slide
+type for each cell. To do that, click on the Common Tools gear icon in the top-right
 
 ![Common Tools](img/common-tools-icon.png)
 
@@ -28,11 +30,13 @@ Then, set the cell type using to the Slide Type dropdown box
 
 ![Slide Type](img/slide-type-box.png)
 
-Once you have set all the cell slide types, you can preview the slides in jupyter lab by clicking the Slides button
+Once you have set all the cell slide types, you can preview the slides in jupyter lab by
+clicking the Slides button
 
 ![Slides Button](img/rise-icon.png)
 
-Or if you want to export the notebook into an HTML presentation, either export directly from jupyter lab
+Or if you want to export the notebook into an HTML presentation, either export
+directly from jupyter lab
 
 ![Export Slides](img/export-as-html-slides.png)
 
@@ -60,7 +64,8 @@ If you want to serve the presentation immediately after conversion, run
 jupyter nbconvert --to slides --post serve notebooks/presentation.ipynb
 ```
 
-If you want to exclude code blocks from the slides (only see the output of cells), run
+If you want to exclude code blocks from the slides (only see the output of
+cells), run
 
 ```shell
 jupyter nbconvert --to slides --no-input notebooks/presentation.ipynb
@@ -68,17 +73,20 @@ jupyter nbconvert --to slides --no-input notebooks/presentation.ipynb
 
 ### Export the HTML Slides as PDF
 
-Open the HTLM slides in **Safari** (this trick does not work in Chrome as of 2/1/2024)
+Open the HTLM slides in your browser
 
 Append `?print-pdf` to the end of the url. Remove `#/` before appending
 
-Press ctrl-P, change layout to landscape, set margins to none, then click Save as PDF
+Press ctrl-P, change layout to landscape, set margins to none, then save as PDF
 
 ### Export as PDF
 
-Exporting as a PDF using nbconvert does not take into account the "Slide Type" setting for each cell. Every cell will be included in the output PDF. It is still possible to exclude input code cells and only show output cells by adding `--no-input` to the cli command.
+Exporting as a PDF using nbconvert does not take into account the "Slide Type" setting for each
+cell. Every cell will be included in the output PDF. It is still possible to exclude input code
+cells and only show output cells by adding `--no-input` to the cli command.
 
-This looks very nice for generating more technical documents. All  notebook markdown fields will be displayed. Can tell a good technical story this way!
+This looks very nice for generating more technical documents. All notebook markdown fields will
+be displayed. Can tell a good technical story this way!
 
 To enable exporting as as PDF, install host-level PDF-related dependencies with
 
@@ -126,7 +134,8 @@ and then manually convert to PDF with
 xelatex filename.tex
 ```
 
-Hopefully you'll see errors related to missing packages which you can then install with `sudo tlmgr install $MISSING_PACKAGE`
+Hopefully you'll see errors related to missing packages which you can then install with
+`sudo tlmgr install $MISSING_PACKAGE`
 
 ## Extensions
 
