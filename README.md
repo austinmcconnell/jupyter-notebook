@@ -109,3 +109,19 @@ xelatex filename.tex
 ```
 
 Hopefully you'll see errors related to missing packages which you can then install with `sudo tlmgr install $MISSING_PACKAGE`
+
+## Extensions
+
+### JupySQL
+
+[Repo](https://github.com/ploomber/jupysql)
+
+[Documentation](https://jupysql.ploomber.io/en/latest/quick-start.html)
+
+For running SQL in Jupyter notebooks via %sql and %%sql magics
+
+### Rise
+
+[Repo](https://github.com/jupyterlab-contrib/rise)
+
+Reveal.js slideshow extension
