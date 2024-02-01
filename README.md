@@ -66,7 +66,19 @@ If you want to exclude code blocks from the slides (only see the output of cells
 jupyter nbconvert --to slides --no-input notebooks/presentation.ipynb
 ```
 
+### Export the HTML Slides as PDF
+
+Open the HTLM slides in **Safari** (this trick does not work in Chrome as of 2/1/2024)
+
+Append `?print-pdf` to the end of the url. Remove `#/` before appending
+
+Press ctrl-P, change layout to landscape, set margins to none, then click Save as PDF
+
 ### Export as PDF
+
+Exporting as a PDF using nbconvert does not take into account the "Slide Type" setting for each cell. Every cell will be included in the output PDF. It is still possible to exclude input code cells and only show output cells by adding `--no-input` to the cli command.
+
+This looks very nice for generating more technical documents. All  notebook markdown fields will be displayed. Can tell a good technical story this way!
 
 To enable exporting as as PDF, install host-level PDF-related dependencies with
 
@@ -92,6 +104,12 @@ To output as a PDF document, run
 
 ```shell
 jupyter nbconvert --to pdf notebooks/presentation.ipynb
+```
+
+To output as a PDF document and exclude input cells, run
+
+```shell
+jupyter nbconvert --to pdf --no-input notebooks/presentation.ipynb
 ```
 
 #### PDF Troubleshooting
