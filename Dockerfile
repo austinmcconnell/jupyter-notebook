@@ -11,4 +11,7 @@ RUN pipenv install --dev --system --deploy
 # Create settings directory
 RUN mkdir -p /home/jovyan/.jupyter/lab/user-settings/jupyterlab_code_formatter/
 
+# Enable/disable extensions
+RUN jupyter labextension disable "@jupyterlab/apputils-extension:announcements"
+
 WORKDIR /notebooks
