@@ -1,0 +1,49 @@
+{
+    "astyle": {
+        "args": []
+    },
+    "autopep8": {},
+    "black": {
+        "line_length": 200,
+        "string_normalization": false
+    },
+    "cacheFormatters": false,
+    "formatOnSave": true,
+    "formatR": {
+        "arrow": true,
+        "indent": 2,
+        "width_cutoff": 150,
+        "wrap": true
+    },
+    "isort": {
+        "combine_as_imports": true,
+        "ensure_newline_before_comments": true,
+        "force_alphabetical_sort": false,
+        "force_grid_wrap": 0,
+        "include_trailing_comma": true,
+        "line_length": 100,
+        "multi_line_output": 3,
+        "use_parentheses": true
+    },
+    "preferences": {
+        "default_formatter": {
+            "R": "formatR",
+            "c++11": "astyle",
+            "python": [
+                "isort",
+                "black"
+            ],
+            "rust": "rustfmt"
+        }
+    },
+    "ruff": {
+        "args": [
+            "--select=I"
+        ]
+    },
+    "styler": {},
+    "suppressFormatterErrors": false,
+    "yapf": {
+        "style_config": "pep8"
+    }
+}

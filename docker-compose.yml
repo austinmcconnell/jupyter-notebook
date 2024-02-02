@@ -5,6 +5,7 @@ services:
       context: .
     volumes:
       - ./notebooks:/notebooks
+      - ./config/jupyterlab-code-formatter.json:/home/jovyan/.jupyter/lab/user-settings/jupyterlab_code_formatter/settings.jupyterlab-settings
     ports:
       - 8888:8888
     container_name: jupyter_notebook
