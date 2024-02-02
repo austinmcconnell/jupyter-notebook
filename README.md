@@ -55,20 +55,20 @@ During a presentation, know the following keyboard shortcuts:
 Run the following command to generate slides including code blocks:
 
 ```shell
-jupyter nbconvert --to slides notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py  --to slides notebooks/presentation.ipynb
 ```
 
 If you want to serve the presentation immediately after conversion, run
 
 ```shell
-jupyter nbconvert --to slides --post serve notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py --to slides --post serve notebooks/presentation.ipynb
 ```
 
 If you want to exclude code blocks from the slides (only see the output of
 cells), run
 
 ```shell
-jupyter nbconvert --to slides --no-input notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py --to slides --no-input notebooks/presentation.ipynb
 ```
 
 ### Export the HTML Slides as PDF
@@ -111,13 +111,13 @@ sudo tlmgr install pdfcol
 To output as a PDF document, run
 
 ```shell
-jupyter nbconvert --to pdf notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py --to pdf notebooks/presentation.ipynb
 ```
 
 To output as a PDF document and exclude input cells, run
 
 ```shell
-jupyter nbconvert --to pdf --no-input notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py --to pdf --no-input notebooks/presentation.ipynb
 ```
 
 #### PDF Troubleshooting
@@ -125,7 +125,7 @@ jupyter nbconvert --to pdf --no-input notebooks/presentation.ipynb
 If you are having issues converting to a PDF, try converting to latex first
 
 ```shell
-jupyter nbconvert --to latex notebooks/presentation.ipynb
+jupyter nbconvert --config config/nbconvert.py --to latex notebooks/presentation.ipynb
 ```
 
 and then manually convert to PDF with
