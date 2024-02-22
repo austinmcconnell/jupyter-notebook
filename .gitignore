@@ -163,5 +163,5 @@ cython_debug/
 
 # Notebooks
 # Ignore all notebooks by default. Explicitly add generic/template/example notebooks'
-notebooks/
+notebooks/*.ipynb
 output/
